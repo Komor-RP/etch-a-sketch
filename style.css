@@ -1,0 +1,145 @@
+body {
+  background: #fff8ec;
+}
+h1, h2, h3, button, span {
+  font-family: 'Cairo';
+}
+h1 {
+  font-size: 3em;
+  text-align: center;
+  margin-top: 60px;
+  color: #007f62;
+}
+#mainGrid {
+  display: flex;
+  width: auto;
+  height: 500px;
+  margin: 60px auto;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  max-width: 503px;
+}
+#mainGrid .gridBox {
+  border: 1px solid #b3b3b3;
+  width: 30px;
+  height: 30px;
+  box-sizing: inherit;
+  background: #fff;
+}
+
+#controls {
+  text-align: center;
+  background: #3A67A5;
+  width: 700px;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+#controls button {
+  color: #fff;
+  background: #007f62;
+  border: none;
+  font-size: 2em;
+  border-radius: 5px;
+  padding: 5px 30px;
+  margin: 0 20px;
+  transition: all .4s ease;
+  cursor: pointer;
+  line-height: 1.2;
+}
+#controls button:hover {
+  background: #005844;
+
+}
+.slidecontainer {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -35px;
+}
+.slidecontainer .slider {
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slidecontainer .slider:hover {
+  opacity: 1;
+}
+.slidecontainer .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+.slider::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    background: #4CAF50;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.slidecontainer span {
+  padding-bottom: 15px;
+}
+#colorSwitch {
+  display: inline-block;
+  position: relative;
+  padding: 0 20px;
+}
+#colorSwitch span, .slidecontainer span {
+  display: block;
+  font-size: 1.3em;
+  line-height: 1;
+  color: #fff;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 88px;;
+  height: 49px;
+  top: 12px;
+}
+.switch input {display:none;}
+
+#colorSwitch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#colorSwitch .slider:before {
+  position: absolute;
+  content: "";
+  height: 39px;
+  width: 39px;
+  left: 5px;
+  bottom: 5px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#colorSwitch input:checked + .slider {
+  background-color: #007f62;
+}
+
+#colorSwitch input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+#colorSwitch input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(39px);
+}
