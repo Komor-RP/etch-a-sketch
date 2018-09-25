@@ -58,14 +58,14 @@ h1 {
 }
 .slidecontainer .slider {
   height: 25px;
-  background: #d3d3d3;
+  background: #ccc;
   outline: none;
-  opacity: 0.7;
+  opacity: 1;
   -webkit-transition: .2s;
   transition: opacity .2s;
 }
 .slidecontainer .slider:hover {
-  opacity: 1;
+  background: #ddd;
 }
 .slidecontainer .slider::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
